@@ -1,10 +1,7 @@
-import { defineConfig } from 'vite';
+import { defineConfig, Plugin } from 'vite';
+import metaFramework from '@mini-meta-framework/vite-plugin'
 
 export default defineConfig({
-    server: {
-        middlewareMode: true, // Enable middleware mode for SSR
-        proxy: {
-            '/api': 'http://localhost:3000' // Proxy API requests to H3 server
-        }
-    }
+    plugins: [metaFramework()]
 });
+
