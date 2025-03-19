@@ -5,14 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:meta": "tsx meta-framework/server.ts",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "serve": "bun install && vite"
   },
   "devDependencies": {
+    "tsx": "^4.19.3",
     "typescript": "~5.7.2",
     "vite": "^6.2.0"
   },
   "dependencies": {
-    "@mini-meta-framework/vite-plugin": "../meta-framework"
+    "h3": "^1.15.1"
   }
 }
